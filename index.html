@@ -17,146 +17,217 @@
 </head>
 
 <body>
-    <header class="bg-[#F8FAFF]">
-        <nav class="max-w-7xl mx-auto h-[105px] px-24 flex justify-between mt-15 bg-white rounded-[24px]">
-            <img src="./imgs/logo.svg" alt="logo" width="180" height="30" />
-            <div class="flex items-center gap-x-4">
-                <button class="py-4.5 px-6 cursor-pointer bg-[#2E60FF0D] rounded-[24px] text-[#2E60FF] text-sm">
+    <header class="bg-[#F8FAFF] pt-15 max-lg:pt-12">
+        <nav
+            class="max-w-7xl mx-auto h-[105px] max-lg:h-[85px] max-sm:h-[65px] max-lg:mx-6 max-lg:px-9 max-sm:px-6 lg:px-24 flex justify-between items-center  bg-[white] rounded-[24px] relative z-50">
+            <img src="./imgs/logo.svg" alt="logo" width="180" height="30" class="max-sm:h-5 max-sm:w-max" />
+
+            <div class="items-center hidden lg:flex gap-x-4">
+                <button
+                    class="py-4.5 px-6 cursor-pointer bg-[#2E60FF0D] rounded-[24px] text-[#2E60FF] text-sm hover:bg-[#2E60FF1A] transition-colors">
                     Регистрация
                 </button>
-                <button class="py-4.5 px-6 cursor-pointer bg-[#2E60FF] rounded-[24px] text-[#fff] text-sm">
+                <button
+                    class="py-4.5 px-6 cursor-pointer bg-[#2E60FF] rounded-[24px] text-[#fff] text-sm hover:bg-[#1a4be6] transition-colors">
                     Войти
                 </button>
             </div>
+
+            <button id="menuToggle" class="p-2 lg:hidden">
+                <img id="menuIcon" src="./imgs/menuopen.svg" alt="Open Menu" width="28" height="28"
+                    class="cursor-pointer" />
+            </button>
+
+            <div id="menuOverlay"
+                class="fixed inset-0 z-40 invisible transition-all duration-300 opacity-0 bg-black/50 lg:hidden">
+                <div id="menuContent"
+                    class="flex flex-col absolute top-0 right-0 w-full h-screen transition-transform duration-300 transform translate-x-full bg-[#2E60FFA6] backdrop-blur-[30px] px-15 pt-[90px] pb-9">
+                    <button id="closeMenu" class="absolute cursor-pointer top-15 right-15">
+                        <img src="./imgs/menuclose.svg" alt="Close Menu" width="24" height="24" />
+                    </button>
+                    <div class="flex flex-col grow-1">
+                        <h2 class="text-[32px] font-black text-white mb-12">Меню</h2>
+                        <ul class="flex flex-col text-sm text-white gap-y-12">
+                            <li class="capitalize"><a href="">заработок</a></li>
+                            <li><a href="">Почему мы</a></li>
+                            <li><a href="">Преимущества</a></li>
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Вопросы</a></li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-4.5 rounded-full bg-[white] text-sm text-[#2E60FF]">Обратный
+                        звонок</button>
+
+                </div>
+            </div>
         </nav>
-        <div class="px-24 mx-auto max-w-7xl">
-            <div class="flex mb-3 gap-x-3 mt-18">
-                <span class="text-[#2E60FF] text-lg font-medium">Программа рекомендаций</span>
+
+        <div class="mx-auto max-lg:px-15 lg:px-24 max-w-7xl max-sm:px-6">
+            <div class="flex mb-3 gap-x-3 mt-18 max-sm:mt-12">
+                <span class="text-[#2E60FF] text-lg font-medium max-sm:text-sm">Программа рекомендаций</span>
                 <div class="border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
             </div>
-            <h1 class="font-extrabold text-[80px] leading-[94px] uppercase text-[#000] mb-17">Зарабатывайте вместе <span
-                    class="text-[#2E60FF]">с нами</span></h1>
+            <h1
+                class="font-extrabold max-lg:text-[52px] lg:text-[80px] max-sm:text-[28px] leading-tight lg:leading-[94px] max-sm:leading-[45px] uppercase text-[#000] mb-17 max-sm:mb-10">
+                Зарабатывайте вместе <span class="text-[#2E60FF]">с нами</span>
+            </h1>
         </div>
     </header>
     <main>
-        <section class="bg-[#2E60FF] relative">
-            <div class="px-24 mx-auto max-w-7xl">
-                <div class="max-w-[478px]">
-                    <h2 class="pt-10 mb-3 font-black text-[32px] text-white">Рекомендуйте</h2>
-                    <p class="text-xs text-white/70 max-w-[320px] mb-8">Нашу компанию и получайте % с каждого
+        <section class="bg-[#2E60FF] relative  max-sm:h-[525px] max-sm:overflow-hidden">
+            <div class="px-24 mx-auto max-w-7xl max-lg:px-15 max-sm:px-9">
+                <div class="max-w-[478px] ">
+                    <h2
+                        class="pt-10 mb-3 font-black text-[32px] text-white max-lg:pt-[304px] max-sm:pt-7 max-sm:text-[24px]">
+                        Рекомендуйте
+                    </h2>
+                    <p class="text-xs text-white/70 max-w-[320px] mb-8 max-sm:mb-4.5">Нашу компанию и получайте % с
+                        каждого
                         перевезённого
                         нами
                         контейнера
                     </p>
-                    <h3 class="mb-5 text-sm font-bold text-white">
+                    <h3 class="mb-5 text-sm font-bold text-white max-sm:mb-3">
                         Отправьте номер, мы перезвоним
                     </h3>
-                    <div class="flex bg-[#1E54FF] h-[70px] rounded-[24px] mb-8">
-                        <div class="flex flex-col justify-center px-5 py-3 grow-1">
+                    <div class="flex sm:bg-[#1E54FF] h-[70px] rounded-[24px] mb-8 max-sm:flex-col max-sm:h-max">
+                        <div
+                            class="flex flex-col justify-center px-5 py-3 grow-1 max-sm:bg-[#1E54FF] max-sm:rounded-[24px]  max-sm:mb-1.5">
                             <label for="phone" class="text-[#FFFFFF80] text-xs mb-1">Введите номер</label>
                             <input type="text" class="outline-[0] text-white text-sm placeholder:text-white"
                                 placeholder="+7(__ __) ___ __ __">
                         </div>
                         <button
-                            class="cursor-pointer h-full w-[207px] rounded-[24px] bg-[#19358C] text-white text-sm font-black">Стать
+                            class="cursor-pointer h-full max-sm:h-[70px] max-sm:w-full w-[207px] rounded-[24px] bg-[#19358C] text-white text-sm font-black">Стать
                             партнером</button>
                     </div>
-                    <h3 class="mb-5 text-sm font-bold text-white">Или напишите нам</h3>
-                    <div class="flex pb-8 space-x-6">
-                        <a href="#" class="flex items-center">
-                            <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
-                            <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
-                        </a>
-                        <a href="#" class="flex items-center">
-                            <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
-                            <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
-                        </a>
+                    <div class="max-lg:flex max-lg:gap-x-7 max-lg:items-center 
+            max-sm:flex-col max-sm:items-start max-sm:px-15 max-sm:mb-0
+            max-sm:[background:linear-gradient(180deg,rgba(46,96,255,0)_-7.33%,#2E60FF_88.79%)] 
+      max-sm:h-[118px] max-sm:absolute 
+            max-sm:z-[10] max-sm:w-full max-sm:left-0 max-sm:bottom-0 max-sm:pt-11">
+
+                        <h3 class="text-sm font-bold text-white lg:mb-5 max-sm:mb-5">Или напишите нам</h3>
+                        <div class="flex space-x-6 lg:pb-8">
+                            <a href="#" class="flex items-center">
+                                <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
+                                <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
+                            </a>
+                            <a href="#" class="flex items-center">
+                                <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
+                                <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-                <div class="absolute right-0 top-[-55px]">
-                    <img src="./imgs/heroo.png" alt="">
+                <div class="absolute right-0 sm:top-[-55px] max-sm:bottom-[0px]">
+                    <img src="./imgs/heroo.png" alt="" class="max-lg:w-[532px] max-sm:w-[390px] max-sm:h-[197px]">
                 </div>
             </div>
         </section>
         <section class="bg-[#2E60FF] relative">
-            <div class="px-24 mx-auto max-w-7xl">
-                <h2 class="py-[90px] text-white font-black text-[48px]">Сколько вы заработаете</h2>
-                <div class="grid grid-cols-3 space-x-24 mb-7">
+            <div class="px-24 mx-auto max-w-7xl max-lg:px-15 max-sm:px-6">
+                <h2
+                    class="py-[90px] max-lg:pt-20 max-sm:py-15 max-lg:pb-18 text-white font-black text-[48px] max-sm:text-[28px]">
+                    Сколько
+                    вы заработаете
+                </h2>
+                <div
+                    class="grid grid-cols-3 space-x-24 mb-7 max-lg:mb-9 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:gap-y-9 max-lg:space-x-16 max-lg:gap-y-16">
                     <div class="flex flex-col">
-                        <div class="flex mb-6 gap-x-3">
-                            <h3 class="text-[#fff] text-[40px] font-extrabold">30 000</h3>
+                        <div class="flex mb-6 gap-x-3 max-lg:mb-3">
+                            <h3 class="text-[#fff] text-[40px] font-extrabold max-lg:text-[32px]">30 000</h3>
                             <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
                         </div>
                         <p class="font-medium text-white/70 ">Рублей средний чек перевозки контейнера </p>
                     </div>
                     <div class="flex flex-col">
-                        <div class="flex mb-6 gap-x-3">
-                            <h3 class="text-[#fff] text-[40px] font-extrabold">От 28 </h3>
+                        <div class="flex mb-6 gap-x-3 max-lg:mb-3">
+                            <h3 class="text-[#fff] text-[40px] max-lg:text-[32px] font-extrabold">От 28 </h3>
                             <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
                         </div>
                         <p class="font-medium text-white/70 ">Контейнеров в среднем у клиента в месяц</p>
                     </div>
                     <div class="flex flex-col">
-                        <div class="flex mb-6 gap-x-3">
-                            <h3 class="text-[#fff] text-[40px] font-extrabold">Платим 4%</h3>
+                        <div class="flex mb-6 gap-x-3 max-lg:mb-3">
+                            <h3 class="text-[#fff] text-[40px] max-lg:text-[32px] font-extrabold">Платим 4%</h3>
                             <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
                         </div>
                         <p class="font-medium text-white/70 ">С каждого контейнера от ваших клиентов</p>
                     </div>
                 </div>
-                <div class="relative flex justify-between pb-24 text-nowrap">
-                    <div class="absolute w-20 top-[180px]">
+                <div class="hidden max-lg:block bg-[url(./imgs/borderline.svg)] h-[2px]"></div>
+                <div class="relative flex pb-24 sm:justify-between text-nowrap max-lg:flex-wrap max-sm:pb-15">
+                    <div class="absolute w-20 sm:top-[180px] max-sm:bottom-[66px] ">
                         <img src="./imgs/borderline.svg" alt="">
                     </div>
-                    <p class="text-[#FFFFFF99] text-[40px] mt-[98px]">30 000 ₽</p>
-                    <img src="./imgs/x28.png" alt="">
-                    <p class="text-[#FFFFFF99] text-[40px] mt-[98px]">× 4%</p>
+                    <p class="text-[#FFFFFF99] text-[40px] mt-[98px] max-lg:mt-9 max-lg:text-[32px] ">30 000 ₽</p>
+                    <img src="./imgs/x28.png" alt=""
+                        class="max-lg:w-[110px] max-lg:h-[116px]  max-lg:ml-8 max-lg:mr-7 max-sm:mr-0 max-sm:ml-6 max-sm:w-30">
+                    <p
+                        class="text-[#FFFFFF99] text-[40px] mt-[98px] max-lg:mt-9 max-lg:text-[32px] max-lg:w-[30%] max-sm:w-max max-sm:mt-7 max-sm:mr-6">
+                        × 4%
+                    </p>
+                    <br>
                     <div
-                        class="mt-[98px] flex text-[#2E60FF] bg-[white] w-[174px] h-[64px] rounded-[24px] items-center justify-center space-x-2">
+                        class="mt-[98px] max-lg:mt-5 flex text-[#2E60FF] bg-[white] w-[174px] h-[64px] rounded-[24px] items-center justify-center space-x-2">
                         <p class="text-[32px] font-extrabold">× 5</p>
                         <p class="text-sm">Клиентов </p>
                     </div>
-                    <div class="flex flex-col mt-[98px] ">
-                        <p class="text-[#FFFFFF] mb-1 font-black text-[40px]"> = 168 000</p>
-                        <p class="font-bold text-right text-white">рублей в месяц*</p>
+                    <div
+                        class="flex lg:flex-col mt-[98px] max-lg:mt-5  max-lg:gap-x-8 max-lg:items-center max-sm:w-full max-sm:flex-col max-sm:items-end">
+                        <p class="text-[#FFFFFF] lg:mb-1 font-black text-[40px]"> = 168 000</p>
+                        <p class="font-bold text-white uppercase lg:text-right max-lg:text-wrap max-lg:leading-[16px]">
+                            рублей<br class="lg:hidden max-lg:block max-sm:hidden">в месяц*</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bg-[#F8FAFF] pt-30 pb-[90px] ">
+        <section class="bg-[#F8FAFF] pt-30 pb-[90px] max-lg:pt-[90px] max-lg:pb-15 max-sm:py-15 ">
 
-            <div class="max-w-[1066px] mx-auto">
-                <div class="mb-12">
-                    <h1 class="mb-4 text-[48px] font-black max-w-[822px] leading-[50px]">
+            <div class="max-w-[1066px] mx-auto max-lg:px-15 max-sm:px-6">
+                <div class="mb-[72px] max-sm:mb-9">
+                    <h1
+                        class="text-[48px] font-black max-w-[822px] leading-[50px] max-lg:leading-[100%] max-sm:text-[32px]">
                         <span class="text-[#2E60FF]">Как работает</span>
                         <span class="text-black"> программа рекомендаций</span>
                     </h1>
                 </div>
 
-                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
-                    <div class="flex flex-col h-[235px] justify-center">
-                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2">
-                            Рекомендуете <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+                <div
+                    class="relative h-[235px] max-sm:h-[340px] px-[60px] mb-6 max-sm:px-5 max-sm:mb-3 bg-white rounded-[24px] overflow-hidden ">
+                    <div class="flex flex-col h-[235px] max-sm:h-[340px] sm:justify-center ">
+                        <h2
+                            class="mb-0 text-[32px] max-sm:text-[28px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2 max-sm:mt-8">
+                            Рекомендуете <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
                         </h2>
-                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex">
+                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] sm:flex max-sm:text-[28px]">
                             нашу
                             компанию
                         </h2>
+
 
                         <p class="max-w-[480px]">
                             Клиентам, которым нужно
                             <span class="font-bold text-[#2E60FF]">перевезти контейнеры</span>
                             на авто.
                         </p>
-                        <img src="./imgs/item11.svg" alt="" width="300" height="235" class="absolute top-0 right-0 ">
+                        <img src="./imgs/item11.svg" alt="" width="300" height="235"
+                            class="absolute sm:top-0 right-0 max-lg:right-[-133px] max-sm:top-[180px] max-sm:right-0 max-sm:h-[168px] max-sm:hidden">
+                        <img src="./imgs/mobileicon.svg" alt="" width="300" height="235"
+                            class="absolute sm:top-0 right-0 max-lg:right-[-133px] max-sm:top-[180px] max-sm:right-[-40px] max-sm:h-[168px] sm:hidden">
                     </div>
                 </div>
-                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
-                    <div class="flex flex-col h-[235px] justify-center">
-                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2">
-                            Заключаем <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+                <div
+                    class="relative h-[235px] max-sm:h-[340px] px-[60px] mb-6 max-sm:px-5 max-sm:mb-3 bg-white rounded-[24px] overflow-hidden ">
+                    <div class="flex flex-col h-[235px] max-sm:h-[340px] sm:justify-center">
+                        <h2
+                            class="mb-0 text-[32px] max-sm:text-[28px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2  max-sm:mt-8">
+                            Заключаем <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
                         </h2>
-                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex ">
+                        <h2
+                            class="mb-3 -mt-1 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex max-sm:text-[28px]">
                             договор
                         </h2>
 
@@ -166,29 +237,36 @@
                             контейнеров на постоянной основе.
                         </p>
                         <img src="./imgs/item22.svg" alt="" width="300" height="235"
-                            class="absolute top-0 right-0 w-auto h-full">
+                            class="absolute top-0 right-0 w-auto h-full max-lg:right-[-203px] max-sm:h-[150px] max-sm:top-[190px] max-sm:right-0 ">
                     </div>
                 </div>
-                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
-                    <div class="flex flex-col h-[235px] justify-center">
-                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2 capitalize">
+                <div
+                    class="relative h-[235px] max-sm:h-[340px] px-[60px] mb-6 max-sm:px-5 max-sm:mb-3 bg-white rounded-[24px] overflow-hidden ">
+                    <div class="flex flex-col h-[235px] max-sm:h-[340px] sm:justify-center">
+                        <h2
+                            class="mb-0 text-[32px] max-sm:text-[28px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2  max-sm:mt-8 capitalize">
                             мы<div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
                         </h2>
-                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex">
-                            платим вам 4 %
+                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex max-sm:text-nowrap">
+                            платим вам 4%
                         </h2>
 
                         <p class="max-w-[480px]">
                             За каждый перевезённый нами контейнер от приведённых вами клиентов.
                         </p>
                         <img src="./imgs/item33.svg" alt="" width="300" height="235"
-                            class="absolute right-0 w-auto top-8 ">
+                            class="absolute right-0 w-auto top-8 max-lg:hidden">
+                        <img src="./imgs/4.svg" alt="" width="160" height="94"
+                            class="absolute  w-auto sm:top-8 lg:hidden max-lg:block max-lg:right-[16px] max-sm:bottom-6">
+                        <img src="./imgs/mediashape.svg" alt="" width="160" height="94"
+                            class="absolute  w-auto bottom-0 lg:hidden max-lg:block max-lg:right-[0px]">
                     </div>
                 </div>
                 <div
-                    class="pl-[60px] pt-12 pb-9 rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person11.png')] bg-no-repeat bg-bottom-right">
+                    class="pl-[60px]  pt-12 pb-9 max-sm:px-5 max-sm:pt-8 relative overflow-hidden max-lg:h-[624px] max-sm:h-[694px] rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person11.png')] bg-no-repeat bg-bottom-right">
                     <div class="flex flex-col">
-                        <h2 class="mb-3 text-[32px] font-bold text-[#fff] max-w-[496px] ">
+                        <h2
+                            class="mb-3 text-[32px] font-bold text-[#fff] max-w-[496px] max-sm:text-[28px] max-sm:leading-[100%]">
                             Больше 1000 компаний в нашей базе
                         </h2>
 
@@ -197,9 +275,17 @@
                             Возможно, у вас уже есть свои наработки по клиентам, а если нет, то <span
                                 class="font-bold">мы дадим вам свои</span>
                         </p>
-                        <div class="flex space-x-2 mt-[38px] mb-[46px]">
-                            <p class="text-sm leading-[12px] font-black text-white">Получите <br> инструкцию <br>
-                                по сотрудничеству:</p>
+                        <div class="flex max-sm:flex-col space-x-2 mt-[38px] mb-[46px] max-lg:mb-[146px]">
+                            <p class="text-sm leading-[12px] font-black text-white max-sm:hidden">
+                                <span class="max-lg:hidden max-sm:inline">Получите</span> <br class="max-lg:hidden ">
+                                инструкцию <br class="max-sm:hidden">
+                                по сотрудничеству:
+                            </p>
+                            <p class="text-sm leading-[12px] font-black text-white sm:hidden max-sm:mb-3">
+                                Получите
+                                инструкцию
+                                по сотрудничеству:
+                            </p>
                             <div class="flex space-x-6">
                                 <a href="#" class="flex items-center">
                                     <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
@@ -212,19 +298,28 @@
                             </div>
 
                         </div>
-                        <div class="flex gap-x-2">
-                            <img src="./imgs/starwhite.svg" alt="" class="self-start mt-3">
-                            <div class="flex flex-col">
-                                <div class="flex items-center mb-1 gap-x-1">
+                        <div
+                            class="max-lg:absolute max-lg:left-0 max-lg:bottom-[-30px] max-sm:bottom-0 flex gap-x-2 max-lg:h-[200px] max-lg:[background:linear-gradient(0deg,#000000_19.08%,rgba(0,0,0,0)_90.75%)] max-lg:pl-15 max-lg:pr-4 max-sm:px-7 max-sm:pt-15">
+                            <img src="./imgs/starwhite.svg" alt="" class="self-start mt-3 max-lg:hidden">
+                            <div class="flex flex-col max-lg:justify-center max-sm:hidden">
+                                <div class="flex items-center mb-1 gap-x-1 max-lg:flex-wrap">
                                     <p class="text-[white]/70 text-xs">Уже работаем с клиентами, у которых</p>
                                     <div class="text-xs text-[#2E60FF] px-1 py-[10px] bg-white rounded-full font-bold">
                                         сотни
                                         контейнеров в месяц</div>
-                                    <p class="text-[white]/70 text-xs">Но есть ещё клиенты, с которыми мы пока</p>
+                                    <p class="text-[white]/70 text-xs max-lg:mt-1">Но есть ещё клиенты, с которыми мы
+                                        пока</p>
                                 </div>
-                                <p class="text-[white]/70 text-xs">не заключили договор. Подключайтесь к программе, и
+                                <p class="text-[white]/70 text-xs ">не заключили договор. Подключайтесь к программе, и
                                     будем зарабатывать вместе.</p>
                             </div>
+                            <p class="text-[white]/70 text-xs sm:hidden leading-[20px]">Уже работаем с клиентами, у
+                                которых
+                                <span class="font-bold">сотни контейнеров в месяц.</span> Но есть ещё клиенты, с
+                                которыми мы пока не заключили
+                                договор.
+                                Подключайтесь к программе, и будем зарабатывать вместе.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -233,65 +328,88 @@
             </div>
         </section>
 
-        <section class="bg-[#2E60FF] pt-30 pb-[90px]">
-            <h1 class="text-[48px] leading-[100%] font-[900] px-24 max-w-7xl mx-auto text-white mb-[72px]">Почему с нами
+        <section class="bg-[#2E60FF] pt-30 pb-[90px] max-lg:pt-[90px] max-lg:pb-15 max-sm:py-15">
+            <h1
+                class="text-[48px] leading-[100%] font-[900] px-24 max-w-7xl mx-auto text-white mb-[72px] max-sm:mb-9 max-lg:px-15 max-sm:px-6 max-sm:text-[32px]">
+                Почему с нами
                 выгодно</h1>
-            <div class="px-24 mx-auto max-w-7xl">
-                <div class="flex gap-5 justify-center mb-[24px]">
-                    <div class="w-[525px] h-[329px] flex bg-[#FFFFFF0D] p-[60px] items-end rounded-[24px] relative">
+            <div class="px-24 mx-auto max-w-7xl max-lg:px-15 max-sm:px-6">
+                <div class="flex gap-5 justify-center mb-[24px] max-lg:flex-wrap">
+                    <div
+                        class="w-[525px] h-[329px] max-sm:h-[273px] max-lg:w-full flex bg-[#FFFFFF0D] p-[60px] max-sm:px-5 max-sm:py-9 items-end rounded-[24px] relative">
                         <div>
                             <p class="text-white text-[28px] mb-[12px] font-[900]">Еженедельно</p>
                             <p class="text-[16px] text-[#FFFFFFB2] leading-[24px] font-[500]">Авторасчёт и оплата раз в
                                 неделю независимо от количества контейнеров.</p>
                         </div>
-                        <div class="absolute top-11 right-11">
+                        <div class="absolute top-11 right-11 max-sm:top-8 max-sm:right-8 max-sm:w-[72px]">
                             <img src="./imgs/icon1.svg" alt="">
                         </div>
                     </div>
 
-                    <div class="w-[525px] h-[329px] flex bg-[#FFFFFF0D] p-[60px] items-end rounded-[24px] relative">
+                    <div
+                        class="w-[525px] h-[329px] max-sm:h-[273px] max-lg:w-full flex bg-[#FFFFFF0D] p-[60px] max-sm:px-5 max-sm:py-9 items-end rounded-[24px] relative">
                         <div>
                             <p class="text-white text-[28px] mb-[12px] font-[900]">Всё прозрачно</p>
                             <p class="text-[16px] text-[#FFFFFFB2] leading-[24px] font-[500]">Вы видите все заказы,
                                 суммы, сроки и другие важные данные.</p>
                         </div>
-                        <div class="absolute top-11 right-11">
+                        <div class="absolute top-11 right-11 max-sm:top-8 max-sm:right-8 max-sm:w-[72px]">
                             <img src="./imgs/icon2.svg" alt="">
                         </div>
                     </div>
                 </div>
                 <div
-                    class="px-[63px] py-[77px] flex w-full h-[389px] justify-end items-center bg-[url('./imgs/bigstar.svg')] bg-no-repeat bg-right bg-[#FFFFFF0D] rounded-[24px] relative">
-                    <img src="./imgs/trak2.png" alt="" class="absolute bottom-0 left-0">
-                    <div class="w-1/2">
-                        <p class="text-[24px] text-[#FFFFFF] font-[900] leading-[38px] mb-[20px]">Вы сможете постоянно
-                            увеличивать свой доход</p>
-                        <p class="text-[16px] text-[#FFFFFFB2] mb-[48px] font-[500]">Рекордное количество контейнеров на
-                            одного партнёра за месяц было <span class="text-[#FFFFFF]">384 шт. (460 800 ₽)</span></p>
+                    class="px-[63px] py-[77px] flex w-full h-[389px] justify-end items-center 
+         lg:bg-[url('./imgs/bigstar.svg')] max-sm:bg-[url('./imgs/bigstar.svg')] bg-no-repeat bg-right max-sm:bg-top bg-[#FFFFFF0D] 
+         rounded-[24px] relative max-lg:flex-col max-lg:justify-center max-lg:h-[444px] max-sm:h-[514px] max-sm:px-5 max-sm:pt-16 max-sm:pb-12 max-sm:overflow-hidden">
+
+
+
+                    <img src="./imgs/trak2.png" alt=""
+                        class="absolute bottom-0 lg:left-0 z-[1] max-lg:bottom-auto max-lg:right-0 max-lg:mt-[-40px] max-lg:z-[10] max-sm:bottom-[-120px]">
+
+                    <div
+                        class="w-1/2 max-lg:w-full max-lg:mt-6 max-lg:absolute max-sm:static max-lg:bottom-15 max-lg:px-15 max-sm:px-0 max-sm:mt-0 max-lg:z-[20]">
+                        <p
+                            class="text-[24px] text-[#FFFFFF] font-[900] leading-[38px] mb-[20px] max-lg:w-[499px] max-sm:w-[292px]">
+                            Вы сможете постоянно увеличивать свой доход
+                        </p>
+                        <p
+                            class="text-[16px] text-[#FFFFFFB2] mb-[48px] font-[500] max-lg:mb-9 max-lg:w-[499px] max-sm:w-full">
+                            Рекордное количество контейнеров на одного партнёра за месяц было
+                            <span class="text-[#FFFFFF] max-sm:block">384 шт. (460 800 ₽)</span>
+                        </p>
                         <button
-                            class="w-[246px] h-[70px] flex justify-center items-center gap-4 text-[14px] text-[#2E60FF] font-[900] bg-[#FFFFFF] rounded-[24px]">Присоединиться
-                            <span><img src="./imgs/icon3.svg" alt=""></span></button>
+                            class="w-[246px] h-[70px] flex justify-center items-center gap-4 
+             text-[14px] text-[#2E60FF] font-[900] bg-[#FFFFFF] rounded-[24px] max-sm:w-full max-sm:justify-between max-sm:pl-6 max-sm:pr-[14px]">
+                            Присоединиться
+                            <span><img src="./imgs/icon3.svg" alt=""></span>
+                        </button>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="bg-[#F8FAFF] pt-30 pb-[90px]">
+        <section class="bg-[#F8FAFF] pt-30 pb-[90px] max-lg:pt-[90px] max-lg:pb-15 max-sm:pt-15 max-sm:pb-[30px]">
             <div
-                class=" mb-6 h-[320px] mx-auto max-w-[1070px] bg-[#FFFFFF] rounded-[24px] grid grid-cols-2 pt-[70px] bg-[url('./imgs/shape.svg')] bg-no-repeat [background-position:111px_bottom] pl-15 pr-9">
-                <h2 class="text-[32px] font-black ">Ценим <span class="text-[#2E60FF]">каждого</span> партнера!</h2>
+                class=" mb-6 h-[320px] max-lg:h-max mx-auto max-w-[1070px] max-lg:mx-15 max-sm:mx-6 bg-[#FFFFFF] rounded-[24px] grid grid-cols-2 max-lg:grid-cols-1 pt-[70px] max-sm:pt-9 bg-[url('./imgs/shape.svg')] bg-no-repeat [background-position:111px_bottom] max-lg:[background-position:calc(100%+0px)_bottom] pl-15 pr-9 max-sm:px-5 max-sm:pb-6 max-lg:pb-15">
+                <h2 class="text-[32px] font-black max-lg:mb-6 max-sm:text-[28px] max-sm:leading-[100%]">Ценим <span
+                        class="text-[#2E60FF]">каждого</span>
+                    партнера!</h2>
 
-                <div class="flex flex-col">
-                    <div class="flex gap-x-4.5 mb-6">
-                        <img src="./imgs/starblue.svg" alt="">
+                <div class="flex flex-col ">
+                    <div class="flex gap-x-4.5 mb-6 max-sm:mb-3 max-sm:gap-x-2">
+                        <img src="./imgs/starblue.svg" alt="" class="self-start mt-1">
                         <p>У вас <span class="text-[#2E60FF] font-bold">свободный</span> и удалённый график</p>
                     </div>
-                    <div class="flex gap-x-4.5 mb-6">
+                    <div class="flex gap-x-4.5 mb-6 max-sm:mb-3 max-sm:gap-x-2">
                         <img src="./imgs/starblue.svg" alt="" class="self-start mt-1">
                         <p>Программу можно совмещать с другой работой
                             или сделать её<span class="text-[#2E60FF] font-bold">основным</span> источником дохода</p>
                     </div>
-                    <div class="flex gap-x-4.5 mb-6">
+                    <div class="flex gap-x-4.5 lg:mb-6 max-sm:mb-3 max-sm:gap-x-2">
                         <img src="./imgs/starblue.svg" alt="" class="self-start mt-1">
                         <p>Вам не обязательно знать контейнерный рынок. Главное — <span
                                 class="text-[#2E60FF] font-bold">уметь договариваться.</span> Всё остальное мы
@@ -301,18 +419,19 @@
             </div>
 
             <div
-                class="max-w-[1070px] mx-auto pl-[60px] pt-[58px] pb-11 rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person22.png')] bg-no-repeat [background-position:calc(100%+180px)_bottom]">
+                class="max-w-[1070px] mx-auto max-lg:mx-15 max-sm:mx-6 pl-[60px] max-sm:px-5 max-sm:pt-9 max-sm:pb-8 pt-[58px] pb-11 rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person22.png')] bg-no-repeat [background-position:calc(100%+280px)_bottom] max-sm:[background-position:calc(100%+200px)_bottom] max-sm:[background-size:auto_328px]">
                 <div class="flex flex-col">
                     <h2 class="mb-3 text-[28px] font-black text-[#fff]">
                         Стабильно и долгосрочно!
                     </h2>
 
-                    <p class="max-w-[447px] text-white leading-[24px] mb-9">
+                    <p class="max-w-[447px] text-white leading-[24px] mb-9 ">
                         Расчитайте свой приблизительный <span class="font-bold">доход,</span> и мы поможем вам его
                         получить.
                     </p>
 
-                    <div class="relative w-full max-w-[560px] h-[62px] flex items-center">
+                    <div
+                        class="relative w-full max-w-[560px] max-lg:w-[412px] h-[62px] flex items-center max-sm:w-full">
                         <div class="w-full h-4 rounded-full bg-white/15">
                             <div id="sliderFill" class="h-full bg-white rounded-l-full"></div>
                         </div>
@@ -336,41 +455,45 @@
                         </h3>
                         <div class="border-1 border-[#fff] w-8 self-end mb-2"></div>
                     </div>
-                    <p class="text-xs text-[white]/70 mb-8">Учитывая, что в среднем клиент даёт от <span
+                    <p class="text-xs text-[white]/70 mb-8 max-sm:mb-12">Учитывая, что в среднем клиент даёт от <span
                             class="text-white">28 контейнеров в месяц*</span>
                     </p>
 
-                    <div class="flex items-center gap-15">
+                    <div class="flex sm:items-center gap-15 max-sm:flex-col-reverse max-sm:gap-3">
                         <button
-                            class="w-[240px] h-[70px] rounded-[24px] text-sm text-[#FFFFFF] font-bold bg-[#19358C] hover:bg-[#152c6e] active:bg-[#0f2152] transition-colors duration-200">
+                            class="w-[240px] h-[70px] max-sm:w-full rounded-[24px] text-sm text-[#FFFFFF] font-bold bg-[#19358C] hover:bg-[#152c6e] active:bg-[#0f2152] transition-colors duration-200">
                             Стать партнером
                         </button>
                         <div class="flex flex-col">
-                            <p id="monthlyIncome" class="text-white text-[40px] font-black mb-0">168 000 ₽</p>
-                            <p class="font-bold text-right text-white">Ваш доход в месяц*</p>
+                            <p id="monthlyIncome"
+                                class="text-white text-[40px] font-black mb-0 text-nowrap max-sm:text-[36px]">168 000 ₽
+                            </p>
+                            <p class="font-bold text-white sm:text-right ">Ваш доход в месяц*</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-[#F8FAFF] pt-11 pb-[90px]">
+        <section class="bg-[#F8FAFF] pt-11 pb-[90px] max-lg:pb-15  max-lg:pt-0">
 
-            <div class="flex justify-between mx-auto max-w-[1070px]">
+            <div
+                class="flex justify-between mx-auto max-w-[1070px] max-lg:mx-15 max-sm:mx-6 max-lg:flex-col max-lg:gap-12">
 
                 <div class="flex flex-col">
-                    <h2 class="font-black text-[48px] leading-[100%] text-black mb-6">
+                    <h2 class="font-black text-[48px] leading-[100%] text-black mb-6 max-sm:text-[32px]">
                         Немного <br>
                         <span class="text-[#2E60FF]">о нас</span>
                     </h2>
 
-                    <p class="font-bold text-[16px] leading-[24px] text-[#000000] max-w-[448px] mb-9">
+                    <p class="font-bold text-[16px] leading-[24px] text-[#000000] max-w-[448px] mb-9 ">
                         <span class="text-[#4285F4]">Гарантируем</span> наличие машин за счёт собственного и
                         привлечённого
                         автопарка.
                     </p>
 
-                    <h3 class="mb-6 font-bold text-black">Работаем в таких городах как:</h3>
+                    <h3 class="mb-6 font-bold text-black max-sm:text-[16px] max-sm:max-w-[230px]">Работаем в таких
+                        городах как:</h3>
 
                     <ul class="flex flex-wrap gap-1.5 max-w-[490px]">
                         <li
@@ -393,7 +516,7 @@
                             Полный список</li>
                     </ul>
 
-                    <h3 class="font-[Unbounded]  text-blue-600 mt-12 mb-6 text-sm font-black">
+                    <h3 class="font-[Unbounded]  text-blue-600 mt-12 max-sm:mt-9 mb-6 text-sm font-black">
                         Напишите нам в мессенджерах
                     </h3>
 
@@ -413,41 +536,49 @@
                 </div>
 
 
-                <div class="flex flex-col ">
-                    <div class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 w-[480px] mb-3">
+                <div class="flex flex-col max-lg:grid max-lg:grid-cols-2 max-lg:gap-6 max-sm:grid-cols-1">
+                    <div
+                        class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 max-lg:px-5 max-lg:py-12 max-sm:py-6 w-[480px] mb-3 max-lg:w-full">
                         <div class="flex mb-3 gap-x-3">
-                            <h3 class="text-[#000000] text-[32px] font-bold ">5 лет</h3>
+                            <h3 class="text-[#000000] text-[32px] max-sm:text-[28px] font-bold ">5 лет</h3>
                             <div class="border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
                         </div>
                         <p class="text-[#000000] ">На рынке автоперевозки контейнеров</p>
                     </div>
-                    <div class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 w-[480px] mb-3">
+                    <div
+                        class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 max-lg:px-5 max-lg:py-12 max-sm:py-6 w-[480px] mb-3 max-lg:w-full">
                         <div class="flex mb-3 gap-x-3">
-                            <h3 class="text-[#000000] text-[32px] font-bold ">от 10 000</h3>
+                            <h3 class="text-[#000000] text-[32px] max-sm:text-[28px] font-bold ">от 10 000</h3>
                             <div class="border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
                         </div>
                         <p class="text-[#000000] ">Контейнеров перевозим в год</p>
                     </div>
-                    <div class="flex flex-col bg-[#2E60FF] rounded-[24px] pt-13 pb-8 items-center w-[480px]">
-                        <h2 class="mb-6 text-[32px] font-semibold text-white">
-                            Рейтинг <span class="font-bold">KUBER</span>
+                    <div
+                        class="flex lg:flex-col max-sm:flex-col max-lg:justify-between max-lg:px-8 max-sm:px-5 bg-[#2E60FF] rounded-[24px] pt-13 pb-8 items-center w-[480px] max-lg:w-full max-lg:col-span-2 max-sm:col-span-1">
+                        <h2 class="mb-6 text-[32px] font-semibold text-white max-sm:text-nowrap">
+                            Рейтинг <br class="lg:hidden max-lg:block max-sm:hidden"> <span
+                                class="font-bold">KUBER</span>
                         </h2>
-                        <div class="flex items-center mb-6 gap-x-6">
-                            <div class="flex gap-x-[9px]">
-                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
-                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
-                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
-                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
-                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                        <div class="">
+
+                            <div class="flex items-center mb-6 gap-x-6">
+                                <div class="flex gap-x-[9px]">
+                                    <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                    <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                    <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                    <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                    <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                </div>
+                                <p class="text-lg font-bold text-white text-[36px]">5.0 </p>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-x-3">
-                            <button
-                                class="w-[126px] h-12 text-[#2E60FF] font-bold bg-white rounded-full rotate-[-5deg]">КОД
-                                333</button>
-                            <img src="./imgs/borderline.svg" alt="">
-                            <p class="font-bold text-white">на <a class="underline" target="_blank"
-                                    href="https://ati.su/firms/333/rating">ATI.SU</a></p>
+                            <div class="flex items-center gap-x-3">
+                                <button
+                                    class="w-[126px] h-12 text-[#2E60FF] font-bold bg-white rounded-full rotate-[-5deg]">КОД
+                                    333</button>
+                                <img src="./imgs/borderline.svg" alt="" class="max-sm:w-[60px]">
+                                <p class="font-bold text-white max-sm:text-nowrap">на <a class="underline"
+                                        target="_blank" href="https://ati.su/firms/333/rating">ATI.SU</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -455,14 +586,27 @@
         </section>
 
     </main>
-    <footer class="bg-[#2E60FF] py-15 relative">
-        <div class="max-w-[1070px] mx-auto">
-            <div class="flex justify-between">
-                <div class="flex flex-col">
+    <footer class="bg-[#2E60FF] py-15 relative max-lg:py-12 max-sm:pb-9">
+        <div class="max-w-[1070px] mx-auto max-lg:mx-15 max-sm:mx-10">
+
+            <div class="flex justify-between max-lg:flex-col max-lg:justify-start max-lg:items-start">
+                <img src="./imgs/logof.svg" alt=""
+                    class="max-lg:block lg:hidden max-lg:h-7 max-lg:mb-11 max-sm:h-5 max-sm:mb-9">
+                <div class="flex flex-col max-lg:mb-6">
                     <span class="text-sm text-[white]/80">Почта</span>
                     <h2 class="mt-2 font-black text-white uppercase tetx-lg">partner@kuber.ru</h2>
                 </div>
-                <ul class="flex flex-wrap justify-end gap-x-4 gap-y-3 max-w-[500px]">
+                <div class="flex space-x-6 sm:hidden max-sm:mb-10">
+                    <a href="#" class="flex items-center">
+                        <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
+                        <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
+                    </a>
+                    <a href="#" class="flex items-center">
+                        <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
+                        <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
+                    </a>
+                </div>
+                <ul class="flex flex-wrap lg:justify-end gap-x-4 gap-y-3 max-w-[500px]">
                     <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
                         Удалённая работа</li>
                     <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
@@ -471,17 +615,19 @@
                         Подработка для логистов</li>
                     <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
                         Работа в продажах</li>
-                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                    <li
+                        class="py-[10px] px-[18px] sm:h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
                         Заработок в контейнерной логистике</li>
                 </ul>
             </div>
-            <p class="mb-4 text-xs text-[white]/70">* Не является публичной офертой. Указанные суммы, как пример
+            <p class="mb-4 text-xs text-[white]/70 max-lg:mt-6">* Не является публичной офертой. Указанные суммы, как
+                пример
                 возможного
                 дохода.</p>
-            <div class="border-t border-[#FFFFFF1A] flex justify-between pt-6 items-center">
-                <div class="flex gap-x-[50px]">
-                    <img src="./imgs/logof.svg" alt="">
-                    <div class="flex space-x-6">
+            <div class="border-t border-[#FFFFFF1A] sm:flex justify-between pt-6 max-sm:pt-4.5 items-center">
+                <div class="flex sm:gap-x-[50px] ">
+                    <img src="./imgs/logof.svg" alt="" class="max-lg:hidden">
+                    <div class="flex space-x-6 max-sm:hidden">
                         <a href="#" class="flex items-center">
                             <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
                             <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
@@ -492,12 +638,12 @@
                         </a>
                     </div>
                 </div>
-                <p class="mt-2.5 text-xs text-[white]/70">Политика конфиденциальности</p>
+                <p class="sm:mt-2.5 text-xs text-[white]/70">Политика конфиденциальности</p>
 
             </div>
         </div>
-        <img src="./imgs/shape2.svg" class="absolute bottom-0 left-0" alt="">
-        <img src="./imgs/bgstar1.svg" class="absolute top-0 right-0" alt="">
+        <img src="./imgs/shape2.svg" class="absolute bottom-0 left-0 max-sm:hidden" alt="">
+        <img src="./imgs/bgstar1.svg" class="absolute right-0 sm:top-0 max-sm:bottom-0" alt="">
     </footer>
 </body>
 <script src=" ./main/app.js">

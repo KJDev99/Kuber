@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    const menuToggle = document.getElementById('menuToggle');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuContent = document.getElementById('menuContent');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function openMenu() {
+        menuOverlay.classList.remove('invisible', 'opacity-0');
+        menuOverlay.classList.add('visible', 'opacity-100');
+        menuContent.classList.remove('translate-x-full');
+        menuContent.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenuFunc() {
+        menuOverlay.classList.remove('visible', 'opacity-100');
+        menuOverlay.classList.add('invisible', 'opacity-0');
+        menuContent.classList.remove('translate-x-0');
+        menuContent.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFunc);
+
+    menuOverlay.addEventListener('click', function (e) {
+        if (e.target === menuOverlay) {
+            closeMenuFunc();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeMenuFunc();
+        }
+    });
+
     const sliderInput = document.getElementById('sliderInput');
     const sliderThumb = document.getElementById('sliderThumb');
     const sliderFill = document.getElementById('sliderFill');
