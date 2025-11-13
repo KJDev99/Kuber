@@ -4,18 +4,503 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KUBER</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Unbounded', cursive;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-5xl font-bold underline text-center my-10">
-        Спасибо, что выбрали меня.
+    <header class="bg-[#F8FAFF]">
+        <nav class="max-w-7xl mx-auto h-[105px] px-24 flex justify-between mt-15 bg-white rounded-[24px]">
+            <img src="./imgs/logo.svg" alt="logo" width="180" height="30" />
+            <div class="flex items-center gap-x-4">
+                <button class="py-4.5 px-6 cursor-pointer bg-[#2E60FF0D] rounded-[24px] text-[#2E60FF] text-sm">
+                    Регистрация
+                </button>
+                <button class="py-4.5 px-6 cursor-pointer bg-[#2E60FF] rounded-[24px] text-[#fff] text-sm">
+                    Войти
+                </button>
+            </div>
+        </nav>
+        <div class="px-24 mx-auto max-w-7xl">
+            <div class="flex mb-3 gap-x-3 mt-18">
+                <span class="text-[#2E60FF] text-lg font-medium">Программа рекомендаций</span>
+                <div class="border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+            </div>
+            <h1 class="font-extrabold text-[80px] leading-[94px] uppercase text-[#000] mb-17">Зарабатывайте вместе <span
+                    class="text-[#2E60FF]">с нами</span></h1>
+        </div>
+    </header>
+    <main>
+        <section class="bg-[#2E60FF] relative">
+            <div class="px-24 mx-auto max-w-7xl">
+                <div class="max-w-[478px]">
+                    <h2 class="pt-10 mb-3 font-black text-[32px] text-white">Рекомендуйте</h2>
+                    <p class="text-xs text-white/70 max-w-[320px] mb-8">Нашу компанию и получайте % с каждого
+                        перевезённого
+                        нами
+                        контейнера
+                    </p>
+                    <h3 class="mb-5 text-sm font-bold text-white">
+                        Отправьте номер, мы перезвоним
+                    </h3>
+                    <div class="flex bg-[#1E54FF] h-[70px] rounded-[24px] mb-8">
+                        <div class="flex flex-col justify-center px-5 py-3 grow-1">
+                            <label for="phone" class="text-[#FFFFFF80] text-xs mb-1">Введите номер</label>
+                            <input type="text" class="outline-[0] text-white text-sm placeholder:text-white"
+                                placeholder="+7(__ __) ___ __ __">
+                        </div>
+                        <button
+                            class="cursor-pointer h-full w-[207px] rounded-[24px] bg-[#19358C] text-white text-sm font-black">Стать
+                            партнером</button>
+                    </div>
+                    <h3 class="mb-5 text-sm font-bold text-white">Или напишите нам</h3>
+                    <div class="flex pb-8 space-x-6">
+                        <a href="#" class="flex items-center">
+                            <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
+                            <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
+                        </a>
+                        <a href="#" class="flex items-center">
+                            <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
+                            <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute right-0 top-[-55px]">
+                    <img src="./imgs/heroo.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#2E60FF] relative">
+            <div class="px-24 mx-auto max-w-7xl">
+                <h2 class="py-[90px] text-white font-black text-[48px]">Сколько вы заработаете</h2>
+                <div class="grid grid-cols-3 space-x-24 mb-7">
+                    <div class="flex flex-col">
+                        <div class="flex mb-6 gap-x-3">
+                            <h3 class="text-[#fff] text-[40px] font-extrabold">30 000</h3>
+                            <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
+                        </div>
+                        <p class="font-medium text-white/70 ">Рублей средний чек перевозки контейнера </p>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex mb-6 gap-x-3">
+                            <h3 class="text-[#fff] text-[40px] font-extrabold">От 28 </h3>
+                            <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
+                        </div>
+                        <p class="font-medium text-white/70 ">Контейнеров в среднем у клиента в месяц</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex mb-6 gap-x-3">
+                            <h3 class="text-[#fff] text-[40px] font-extrabold">Платим 4%</h3>
+                            <div class="border-1 border-[#fff] w-8 self-end mb-2 "></div>
+                        </div>
+                        <p class="font-medium text-white/70 ">С каждого контейнера от ваших клиентов</p>
+                    </div>
+                </div>
+                <div class="relative flex justify-between pb-24 text-nowrap">
+                    <div class="absolute w-20 top-[180px]">
+                        <img src="./imgs/borderline.svg" alt="">
+                    </div>
+                    <p class="text-[#FFFFFF99] text-[40px] mt-[98px]">30 000 ₽</p>
+                    <img src="./imgs/x28.png" alt="">
+                    <p class="text-[#FFFFFF99] text-[40px] mt-[98px]">× 4%</p>
+                    <div
+                        class="mt-[98px] flex text-[#2E60FF] bg-[white] w-[174px] h-[64px] rounded-[24px] items-center justify-center space-x-2">
+                        <p class="text-[32px] font-extrabold">× 5</p>
+                        <p class="text-sm">Клиентов </p>
+                    </div>
+                    <div class="flex flex-col mt-[98px] ">
+                        <p class="text-[#FFFFFF] mb-1 font-black text-[40px]"> = 168 000</p>
+                        <p class="font-bold text-right text-white">рублей в месяц*</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F8FAFF] pt-30 pb-[90px] ">
 
-    </h1>
+            <div class="max-w-[1066px] mx-auto">
+                <div class="mb-12">
+                    <h1 class="mb-4 text-[48px] font-black max-w-[822px] leading-[50px]">
+                        <span class="text-[#2E60FF]">Как работает</span>
+                        <span class="text-black"> программа рекомендаций</span>
+                    </h1>
+                </div>
+
+                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
+                    <div class="flex flex-col h-[235px] justify-center">
+                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2">
+                            Рекомендуете <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+                        </h2>
+                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex">
+                            нашу
+                            компанию
+                        </h2>
+
+                        <p class="max-w-[480px]">
+                            Клиентам, которым нужно
+                            <span class="font-bold text-[#2E60FF]">перевезти контейнеры</span>
+                            на авто.
+                        </p>
+                        <img src="./imgs/item11.svg" alt="" width="300" height="235" class="absolute top-0 right-0 ">
+                    </div>
+                </div>
+                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
+                    <div class="flex flex-col h-[235px] justify-center">
+                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2">
+                            Заключаем <div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+                        </h2>
+                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex ">
+                            договор
+                        </h2>
+
+                        <p class="max-w-[480px]">
+                            С клиентами и оказываем им услугу
+                            <span class="font-bold text-[#2E60FF]">автовывоза</span>
+                            контейнеров на постоянной основе.
+                        </p>
+                        <img src="./imgs/item22.svg" alt="" width="300" height="235"
+                            class="absolute top-0 right-0 w-auto h-full">
+                    </div>
+                </div>
+                <div class="relative h-[235px] px-[60px] mb-6 bg-white rounded-[24px] ">
+                    <div class="flex flex-col h-[235px] justify-center">
+                        <h2 class="mb-0 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex gap-x-2 capitalize">
+                            мы<div class=" border-1 border-[#2E60FF] w-8 self-end mb-2"></div>
+                        </h2>
+                        <h2 class="mb-3 text-[32px] font-bold text-[#2E60FF] max-w-[356px] flex">
+                            платим вам 4 %
+                        </h2>
+
+                        <p class="max-w-[480px]">
+                            За каждый перевезённый нами контейнер от приведённых вами клиентов.
+                        </p>
+                        <img src="./imgs/item33.svg" alt="" width="300" height="235"
+                            class="absolute right-0 w-auto top-8 ">
+                    </div>
+                </div>
+                <div
+                    class="pl-[60px] pt-12 pb-9 rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person11.png')] bg-no-repeat bg-bottom-right">
+                    <div class="flex flex-col">
+                        <h2 class="mb-3 text-[32px] font-bold text-[#fff] max-w-[496px] ">
+                            Больше 1000 компаний в нашей базе
+                        </h2>
+
+
+                        <p class="max-w-[496px] text-white leading-[24px]">
+                            Возможно, у вас уже есть свои наработки по клиентам, а если нет, то <span
+                                class="font-bold">мы дадим вам свои</span>
+                        </p>
+                        <div class="flex space-x-2 mt-[38px] mb-[46px]">
+                            <p class="text-sm leading-[12px] font-black text-white">Получите <br> инструкцию <br>
+                                по сотрудничеству:</p>
+                            <div class="flex space-x-6">
+                                <a href="#" class="flex items-center">
+                                    <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
+                                    <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
+                                </a>
+                                <a href="#" class="flex items-center">
+                                    <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
+                                    <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="flex gap-x-2">
+                            <img src="./imgs/starwhite.svg" alt="" class="self-start mt-3">
+                            <div class="flex flex-col">
+                                <div class="flex items-center mb-1 gap-x-1">
+                                    <p class="text-[white]/70 text-xs">Уже работаем с клиентами, у которых</p>
+                                    <div class="text-xs text-[#2E60FF] px-1 py-[10px] bg-white rounded-full font-bold">
+                                        сотни
+                                        контейнеров в месяц</div>
+                                    <p class="text-[white]/70 text-xs">Но есть ещё клиенты, с которыми мы пока</p>
+                                </div>
+                                <p class="text-[white]/70 text-xs">не заключили договор. Подключайтесь к программе, и
+                                    будем зарабатывать вместе.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="bg-[#2E60FF] pt-30 pb-[90px]">
+            <h1 class="text-[48px] leading-[100%] font-[900] px-24 max-w-7xl mx-auto text-white mb-[72px]">Почему с нами
+                выгодно</h1>
+            <div class="px-24 mx-auto max-w-7xl">
+                <div class="flex gap-5 justify-center mb-[24px]">
+                    <div class="w-[525px] h-[329px] flex bg-[#FFFFFF0D] p-[60px] items-end rounded-[24px] relative">
+                        <div>
+                            <p class="text-white text-[28px] mb-[12px] font-[900]">Еженедельно</p>
+                            <p class="text-[16px] text-[#FFFFFFB2] leading-[24px] font-[500]">Авторасчёт и оплата раз в
+                                неделю независимо от количества контейнеров.</p>
+                        </div>
+                        <div class="absolute top-11 right-11">
+                            <img src="./imgs/icon1.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-[525px] h-[329px] flex bg-[#FFFFFF0D] p-[60px] items-end rounded-[24px] relative">
+                        <div>
+                            <p class="text-white text-[28px] mb-[12px] font-[900]">Всё прозрачно</p>
+                            <p class="text-[16px] text-[#FFFFFFB2] leading-[24px] font-[500]">Вы видите все заказы,
+                                суммы, сроки и другие важные данные.</p>
+                        </div>
+                        <div class="absolute top-11 right-11">
+                            <img src="./imgs/icon2.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="px-[63px] py-[77px] flex w-full h-[389px] justify-end items-center bg-[url('./imgs/bigstar.svg')] bg-no-repeat bg-right bg-[#FFFFFF0D] rounded-[24px] relative">
+                    <img src="./imgs/trak2.png" alt="" class="absolute bottom-0 left-0">
+                    <div class="w-1/2">
+                        <p class="text-[24px] text-[#FFFFFF] font-[900] leading-[38px] mb-[20px]">Вы сможете постоянно
+                            увеличивать свой доход</p>
+                        <p class="text-[16px] text-[#FFFFFFB2] mb-[48px] font-[500]">Рекордное количество контейнеров на
+                            одного партнёра за месяц было <span class="text-[#FFFFFF]">384 шт. (460 800 ₽)</span></p>
+                        <button
+                            class="w-[246px] h-[70px] flex justify-center items-center gap-4 text-[14px] text-[#2E60FF] font-[900] bg-[#FFFFFF] rounded-[24px]">Присоединиться
+                            <span><img src="./imgs/icon3.svg" alt=""></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#F8FAFF] pt-30 pb-[90px]">
+            <div
+                class=" mb-6 h-[320px] mx-auto max-w-[1070px] bg-[#FFFFFF] rounded-[24px] grid grid-cols-2 pt-[70px] bg-[url('./imgs/shape.svg')] bg-no-repeat [background-position:111px_bottom] pl-15 pr-9">
+                <h2 class="text-[32px] font-black ">Ценим <span class="text-[#2E60FF]">каждого</span> партнера!</h2>
+
+                <div class="flex flex-col">
+                    <div class="flex gap-x-4.5 mb-6">
+                        <img src="./imgs/starblue.svg" alt="">
+                        <p>У вас <span class="text-[#2E60FF] font-bold">свободный</span> и удалённый график</p>
+                    </div>
+                    <div class="flex gap-x-4.5 mb-6">
+                        <img src="./imgs/starblue.svg" alt="" class="self-start mt-1">
+                        <p>Программу можно совмещать с другой работой
+                            или сделать её<span class="text-[#2E60FF] font-bold">основным</span> источником дохода</p>
+                    </div>
+                    <div class="flex gap-x-4.5 mb-6">
+                        <img src="./imgs/starblue.svg" alt="" class="self-start mt-1">
+                        <p>Вам не обязательно знать контейнерный рынок. Главное — <span
+                                class="text-[#2E60FF] font-bold">уметь договариваться.</span> Всё остальное мы
+                            возьмём на себя</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="max-w-[1070px] mx-auto pl-[60px] pt-[58px] pb-11 rounded-[24px] bg-[#2E60FF] bg-[url('./imgs/person22.png')] bg-no-repeat [background-position:calc(100%+180px)_bottom]">
+                <div class="flex flex-col">
+                    <h2 class="mb-3 text-[28px] font-black text-[#fff]">
+                        Стабильно и долгосрочно!
+                    </h2>
+
+                    <p class="max-w-[447px] text-white leading-[24px] mb-9">
+                        Расчитайте свой приблизительный <span class="font-bold">доход,</span> и мы поможем вам его
+                        получить.
+                    </p>
+
+                    <div class="relative w-full max-w-[560px] h-[62px] flex items-center">
+                        <div class="w-full h-4 rounded-full bg-white/15">
+                            <div id="sliderFill" class="h-full bg-white rounded-l-full"></div>
+                        </div>
+
+                        <div id="sliderThumb"
+                            class="absolute w-[62px] h-[62px] border-[9px] bg-[#2E60FF] border-white rounded-full flex justify-center items-center text-white pl-0.5 cursor-pointer hover:bg-[#152c6e] -translate-x-1/2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </div>
+
+                        <input type="range" min="1" max="15" value="5" step="1" id="sliderInput"
+                            class="absolute w-full h-full opacity-0 cursor-pointer">
+                    </div>
+
+                    <div class="flex mt-4 gap-x-3">
+                        <h3 class="text-[#FFFFFFB2] font-medium">Клиентов от вас: <span id="clientCount"
+                                class="font-bold text-white">5</span>
+                        </h3>
+                        <div class="border-1 border-[#fff] w-8 self-end mb-2"></div>
+                    </div>
+                    <p class="text-xs text-[white]/70 mb-8">Учитывая, что в среднем клиент даёт от <span
+                            class="text-white">28 контейнеров в месяц*</span>
+                    </p>
+
+                    <div class="flex items-center gap-15">
+                        <button
+                            class="w-[240px] h-[70px] rounded-[24px] text-sm text-[#FFFFFF] font-bold bg-[#19358C] hover:bg-[#152c6e] active:bg-[#0f2152] transition-colors duration-200">
+                            Стать партнером
+                        </button>
+                        <div class="flex flex-col">
+                            <p id="monthlyIncome" class="text-white text-[40px] font-black mb-0">168 000 ₽</p>
+                            <p class="font-bold text-right text-white">Ваш доход в месяц*</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#F8FAFF] pt-11 pb-[90px]">
+
+            <div class="flex justify-between mx-auto max-w-[1070px]">
+
+                <div class="flex flex-col">
+                    <h2 class="font-black text-[48px] leading-[100%] text-black mb-6">
+                        Немного <br>
+                        <span class="text-[#2E60FF]">о нас</span>
+                    </h2>
+
+                    <p class="font-bold text-[16px] leading-[24px] text-[#000000] max-w-[448px] mb-9">
+                        <span class="text-[#4285F4]">Гарантируем</span> наличие машин за счёт собственного и
+                        привлечённого
+                        автопарка.
+                    </p>
+
+                    <h3 class="mb-6 font-bold text-black">Работаем в таких городах как:</h3>
+
+                    <ul class="flex flex-wrap gap-1.5 max-w-[490px]">
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Москва</li>
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Санкт-Петербург</li>
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Красноярск</li>
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Новосибирск</li>
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Екатеринбург</li>
+                        <li
+                            class="px-3 py-1.5 cursor-pointer bg-[#2E60FF0D] text-[#2E60FF] text-sm hover:bg-[#2E60FF8C] hover:text-[#FFFFFF] transition-all rounded-full duration-300">
+                            Полный список</li>
+                    </ul>
+
+                    <h3 class="font-[Unbounded]  text-blue-600 mt-12 mb-6 text-sm font-black">
+                        Напишите нам в мессенджерах
+                    </h3>
+
+                    <div class="flex gap-6">
+                        <a href="#"
+                            class="flex items-center gap-2 text-black font-normal text-[14px] leading-[14px] tracking-[0]">
+                            <img src="./imgs/telegram.svg" alt="Telegram" class="w-6 h-6">
+                            Telegram
+                        </a>
+
+                        <a href="#"
+                            class="flex items-center gap-2 text-black font-normal text-[14px] leading-[14px] tracking-[0]">
+                            <img src="./imgs/whatsapp.svg" alt="WhatsApp" class="w-6 h-6">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col ">
+                    <div class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 w-[480px] mb-3">
+                        <div class="flex mb-3 gap-x-3">
+                            <h3 class="text-[#000000] text-[32px] font-bold ">5 лет</h3>
+                            <div class="border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
+                        </div>
+                        <p class="text-[#000000] ">На рынке автоперевозки контейнеров</p>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-[24px] pt-16 pb-10 px-20 w-[480px] mb-3">
+                        <div class="flex mb-3 gap-x-3">
+                            <h3 class="text-[#000000] text-[32px] font-bold ">от 10 000</h3>
+                            <div class="border-1 border-[#2E60FF] w-8 self-end mb-2 "></div>
+                        </div>
+                        <p class="text-[#000000] ">Контейнеров перевозим в год</p>
+                    </div>
+                    <div class="flex flex-col bg-[#2E60FF] rounded-[24px] pt-13 pb-8 items-center w-[480px]">
+                        <h2 class="mb-6 text-[32px] font-semibold text-white">
+                            Рейтинг <span class="font-bold">KUBER</span>
+                        </h2>
+                        <div class="flex items-center mb-6 gap-x-6">
+                            <div class="flex gap-x-[9px]">
+                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                                <img src="./imgs/Star.svg" alt="" class="w-9 h-9">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-3">
+                            <button
+                                class="w-[126px] h-12 text-[#2E60FF] font-bold bg-white rounded-full rotate-[-5deg]">КОД
+                                333</button>
+                            <img src="./imgs/borderline.svg" alt="">
+                            <p class="font-bold text-white">на <a class="underline" target="_blank"
+                                    href="https://ati.su/firms/333/rating">ATI.SU</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-[#2E60FF] py-15 relative">
+        <div class="max-w-[1070px] mx-auto">
+            <div class="flex justify-between">
+                <div class="flex flex-col">
+                    <span class="text-sm text-[white]/80">Почта</span>
+                    <h2 class="mt-2 font-black text-white uppercase tetx-lg">partner@kuber.ru</h2>
+                </div>
+                <ul class="flex flex-wrap justify-end gap-x-4 gap-y-3 max-w-[500px]">
+                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                        Удалённая работа</li>
+                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                        Пассивный доход</li>
+                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                        Подработка для логистов</li>
+                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                        Работа в продажах</li>
+                    <li class="py-[10px] px-[18px] h-[37px] font-medium text-sm text-white bg-[#FFFFFF0D] rounded-full">
+                        Заработок в контейнерной логистике</li>
+                </ul>
+            </div>
+            <p class="mb-4 text-xs text-[white]/70">* Не является публичной офертой. Указанные суммы, как пример
+                возможного
+                дохода.</p>
+            <div class="border-t border-[#FFFFFF1A] flex justify-between pt-6 items-center">
+                <div class="flex gap-x-[50px]">
+                    <img src="./imgs/logof.svg" alt="">
+                    <div class="flex space-x-6">
+                        <a href="#" class="flex items-center">
+                            <img src="./imgs/telegram.svg" alt="telelgram" width="28" height="28">
+                            <span class="text-sm text-[#FFFFFFB2] ml-2">Telegram</span>
+                        </a>
+                        <a href="#" class="flex items-center">
+                            <img src="./imgs/whatsapp.svg" alt="telelgram" width="28" height="28">
+                            <span class="text-sm text-[#FFFFFFB2] ml-2">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                <p class="mt-2.5 text-xs text-[white]/70">Политика конфиденциальности</p>
+
+            </div>
+        </div>
+        <img src="./imgs/shape2.svg" class="absolute bottom-0 left-0" alt="">
+        <img src="./imgs/bgstar1.svg" class="absolute top-0 right-0" alt="">
+    </footer>
 </body>
-<script src="./main.app.js"></script>
+<script src=" ./main/app.js">
+</script>
 
 </html>
